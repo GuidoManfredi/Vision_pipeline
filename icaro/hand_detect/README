@@ -1,0 +1,4 @@
+Attention ! Le boulet qui a fait la cascade pour detection de main n'as pris
+que des mains droites pour l'entrainement. Donc ce detecteur detecte bien les
+mains droites mais galere severment pour les gauches. A corriger si un jour
+le temps s'arrete.

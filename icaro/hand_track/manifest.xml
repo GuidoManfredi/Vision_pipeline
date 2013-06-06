@@ -1,0 +1,16 @@
+<package>
+  <description brief="hand_track">
+
+     hand_track
+
+  </description>
+  <author>Guido ManfrediInconnuInconnu0561336342</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/hand_track</url>
+  <depend package="opencv2"/>
+  <depend package="roscpp"/>
+
+</package>
+
+
