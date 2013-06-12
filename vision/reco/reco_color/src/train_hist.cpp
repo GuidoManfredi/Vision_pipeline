@@ -4,6 +4,7 @@
 
 #include "TrainHist.h"
 
+using namespace cv;
 using namespace std;
 using namespace boost::filesystem;
 
@@ -22,11 +23,14 @@ int main (int argc, char** argv) {
     }
 	}
 	*/
+	/*
 	TrainHist trainer;
 	//trainer.train_instance ("/home/gmanfred/devel/pcl/dataset/rgbd-dataset/apple/apple_1");
 	trainer.train (argv[1]);
 	trainer.save_training ("/home/gmanfred/Desktop/training_results.xml");
-
+	*/
+	TrainHist trainer;
+	trainer.already_trained ("");
 	return 0;
 }
 

@@ -23,7 +23,7 @@ vector<Rect> Detector::detect (Mat img) {
     //|CV_HAAR_DO_ROUGH_SEARCH
     |CV_HAAR_SCALE_IMAGE
     , Size(30, 30) );
-  cout << hands.size () << " hands." << endl;
+  //cout << hands.size () << " hands." << endl;
   // not sure this is usefull, seems to always have aspect ratio = 1
   for (size_t i=0; i<hands.size(); ++i) {
 	  double aspect_ratio = (double)hands[i].width/hands[i].height;

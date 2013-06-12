@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/icaro/hand_track
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/icaro/hand_track/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build
 
 # Utility rule file for rosbuild_premsgsrvgen.
 
@@ -60,6 +60,6 @@ CMakeFiles/rosbuild_premsgsrvgen.dir/clean:
 .PHONY : CMakeFiles/rosbuild_premsgsrvgen.dir/clean
 
 CMakeFiles/rosbuild_premsgsrvgen.dir/depend:
-	cd /home/gmanfred/devel/ros/icaro/hand_track/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/icaro/hand_track /home/gmanfred/devel/ros/icaro/hand_track /home/gmanfred/devel/ros/icaro/hand_track/build /home/gmanfred/devel/ros/icaro/hand_track/build /home/gmanfred/devel/ros/icaro/hand_track/build/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rosbuild_premsgsrvgen.dir/depend
 

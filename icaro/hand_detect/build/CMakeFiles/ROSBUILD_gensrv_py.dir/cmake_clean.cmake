@@ -3,7 +3,7 @@ FILE(REMOVE_RECURSE
   "../src/hand_detect/srv"
   "CMakeFiles/ROSBUILD_gensrv_py"
   "../src/hand_detect/srv/__init__.py"
-  "../src/hand_detect/srv/_Rectangle.py"
+  "../src/hand_detect/srv/_HandDetection.py"
 )
 
 # Per-language clean rules from dependency scanning.

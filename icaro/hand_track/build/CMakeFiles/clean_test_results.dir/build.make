@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/icaro/hand_track
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/icaro/hand_track/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build
 
 # Utility rule file for clean_test_results.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/icaro/hand_track/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/cmake -E remove_directory /home/gmanfred/devel/ros/icaro/hand_track/build/test_results
+	/usr/bin/cmake -E remove_directory /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/gmanfred/devel/ros/icaro/hand_track/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/icaro/hand_track /home/gmanfred/devel/ros/icaro/hand_track /home/gmanfred/devel/ros/icaro/hand_track/build /home/gmanfred/devel/ros/icaro/hand_track/build /home/gmanfred/devel/ros/icaro/hand_track/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

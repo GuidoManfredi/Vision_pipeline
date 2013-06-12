@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/packs/vision/reco/reco_color
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/packs/vision/reco/reco_color/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build
 
 # Utility rule file for rospack_gensrv_all.
 
@@ -60,6 +60,6 @@ CMakeFiles/rospack_gensrv_all.dir/clean:
 .PHONY : CMakeFiles/rospack_gensrv_all.dir/clean
 
 CMakeFiles/rospack_gensrv_all.dir/depend:
-	cd /home/gmanfred/devel/ros/packs/vision/reco/reco_color/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/packs/vision/reco/reco_color /home/gmanfred/devel/ros/packs/vision/reco/reco_color /home/gmanfred/devel/ros/packs/vision/reco/reco_color/build /home/gmanfred/devel/ros/packs/vision/reco/reco_color/build /home/gmanfred/devel/ros/packs/vision/reco/reco_color/build/CMakeFiles/rospack_gensrv_all.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles/rospack_gensrv_all.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rospack_gensrv_all.dir/depend
 

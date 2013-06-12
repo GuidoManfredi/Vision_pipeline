@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/icaro/hand_detect
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/icaro/hand_detect/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hand_detect.dir/depend.make
@@ -69,17 +69,21 @@ CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /opt/ros/groovy/share/roscpp/p
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /opt/ros/groovy/share/geometry_msgs/package.xml
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /opt/ros/groovy/share/sensor_msgs/package.xml
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/icaro/hand_detect/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/manifest.xml
+CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/manifest.xml
+CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/msg_gen/generated
+CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o -c /home/gmanfred/devel/ros/icaro/hand_detect/src/hand_detect.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o -c /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/src/hand_detect.cpp
 
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hand_detect.dir/src/hand_detect.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/icaro/hand_detect/src/hand_detect.cpp > CMakeFiles/hand_detect.dir/src/hand_detect.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/src/hand_detect.cpp > CMakeFiles/hand_detect.dir/src/hand_detect.cpp.i
 
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hand_detect.dir/src/hand_detect.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/icaro/hand_detect/src/hand_detect.cpp -o CMakeFiles/hand_detect.dir/src/hand_detect.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/src/hand_detect.cpp -o CMakeFiles/hand_detect.dir/src/hand_detect.cpp.s
 
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o.requires:
 .PHONY : CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o.requires
@@ -110,17 +114,21 @@ CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /opt/ros/groovy/share/roscpp/pack
 CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /opt/ros/groovy/share/geometry_msgs/package.xml
 CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /opt/ros/groovy/share/sensor_msgs/package.xml
 CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/icaro/hand_detect/build/CMakeFiles $(CMAKE_PROGRESS_2)
+CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/manifest.xml
+CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/manifest.xml
+CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/msg_gen/generated
+CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hand_detect.dir/src/Detector.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/hand_detect.dir/src/Detector.cpp.o -c /home/gmanfred/devel/ros/icaro/hand_detect/src/Detector.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/hand_detect.dir/src/Detector.cpp.o -c /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/src/Detector.cpp
 
 CMakeFiles/hand_detect.dir/src/Detector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hand_detect.dir/src/Detector.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/icaro/hand_detect/src/Detector.cpp > CMakeFiles/hand_detect.dir/src/Detector.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/src/Detector.cpp > CMakeFiles/hand_detect.dir/src/Detector.cpp.i
 
 CMakeFiles/hand_detect.dir/src/Detector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hand_detect.dir/src/Detector.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/icaro/hand_detect/src/Detector.cpp -o CMakeFiles/hand_detect.dir/src/Detector.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/src/Detector.cpp -o CMakeFiles/hand_detect.dir/src/Detector.cpp.s
 
 CMakeFiles/hand_detect.dir/src/Detector.cpp.o.requires:
 .PHONY : CMakeFiles/hand_detect.dir/src/Detector.cpp.o.requires
@@ -159,6 +167,6 @@ CMakeFiles/hand_detect.dir/clean:
 .PHONY : CMakeFiles/hand_detect.dir/clean
 
 CMakeFiles/hand_detect.dir/depend:
-	cd /home/gmanfred/devel/ros/icaro/hand_detect/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/icaro/hand_detect /home/gmanfred/devel/ros/icaro/hand_detect /home/gmanfred/devel/ros/icaro/hand_detect/build /home/gmanfred/devel/ros/icaro/hand_detect/build /home/gmanfred/devel/ros/icaro/hand_detect/build/CMakeFiles/hand_detect.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build/CMakeFiles/hand_detect.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hand_detect.dir/depend
 

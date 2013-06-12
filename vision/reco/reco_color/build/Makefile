@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/packs/vision/reco/reco_color
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/packs/vision/reco/reco_color/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,9 +110,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/packs/vision/reco/reco_color/build/CMakeFiles /home/gmanfred/devel/ros/packs/vision/reco/reco_color/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/packs/vision/reco/reco_color/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -203,19 +203,6 @@ doxygen: cmake_check_build_system
 doxygen/fast:
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
 .PHONY : doxygen/fast
-
-#=============================================================================
-# Target rules for targets named reco_hist
-
-# Build rule for target.
-reco_hist: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 reco_hist
-.PHONY : reco_hist
-
-# fast build rule for target.
-reco_hist/fast:
-	$(MAKE) -f CMakeFiles/reco_hist.dir/build.make CMakeFiles/reco_hist.dir/build
-.PHONY : reco_hist/fast
 
 #=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
@@ -322,19 +309,6 @@ run_tests/fast:
 .PHONY : run_tests/fast
 
 #=============================================================================
-# Target rules for targets named split_flags
-
-# Build rule for target.
-split_flags: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 split_flags
-.PHONY : split_flags
-
-# fast build rule for target.
-split_flags/fast:
-	$(MAKE) -f CMakeFiles/split_flags.dir/build.make CMakeFiles/split_flags.dir/build
-.PHONY : split_flags/fast
-
-#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -385,19 +359,6 @@ test-results-run: cmake_check_build_system
 test-results-run/fast:
 	$(MAKE) -f CMakeFiles/test-results-run.dir/build.make CMakeFiles/test-results-run.dir/build
 .PHONY : test-results-run/fast
-
-#=============================================================================
-# Target rules for targets named test_color_space
-
-# Build rule for target.
-test_color_space: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_color_space
-.PHONY : test_color_space
-
-# fast build rule for target.
-test_color_space/fast:
-	$(MAKE) -f CMakeFiles/test_color_space.dir/build.make CMakeFiles/test_color_space.dir/build
-.PHONY : test_color_space/fast
 
 #=============================================================================
 # Target rules for targets named tests
@@ -475,30 +436,6 @@ src/Histogram.cpp.s:
 	$(MAKE) -f CMakeFiles/train_hist.dir/build.make CMakeFiles/train_hist.dir/src/Histogram.cpp.s
 .PHONY : src/Histogram.cpp.s
 
-src/RecoHist.o: src/RecoHist.cpp.o
-.PHONY : src/RecoHist.o
-
-# target to build an object file
-src/RecoHist.cpp.o:
-	$(MAKE) -f CMakeFiles/reco_hist.dir/build.make CMakeFiles/reco_hist.dir/src/RecoHist.cpp.o
-.PHONY : src/RecoHist.cpp.o
-
-src/RecoHist.i: src/RecoHist.cpp.i
-.PHONY : src/RecoHist.i
-
-# target to preprocess a source file
-src/RecoHist.cpp.i:
-	$(MAKE) -f CMakeFiles/reco_hist.dir/build.make CMakeFiles/reco_hist.dir/src/RecoHist.cpp.i
-.PHONY : src/RecoHist.cpp.i
-
-src/RecoHist.s: src/RecoHist.cpp.s
-.PHONY : src/RecoHist.s
-
-# target to generate assembly for a file
-src/RecoHist.cpp.s:
-	$(MAKE) -f CMakeFiles/reco_hist.dir/build.make CMakeFiles/reco_hist.dir/src/RecoHist.cpp.s
-.PHONY : src/RecoHist.cpp.s
-
 src/TrainHist.o: src/TrainHist.cpp.o
 .PHONY : src/TrainHist.o
 
@@ -522,78 +459,6 @@ src/TrainHist.s: src/TrainHist.cpp.s
 src/TrainHist.cpp.s:
 	$(MAKE) -f CMakeFiles/train_hist.dir/build.make CMakeFiles/train_hist.dir/src/TrainHist.cpp.s
 .PHONY : src/TrainHist.cpp.s
-
-src/reco_hist.o: src/reco_hist.cpp.o
-.PHONY : src/reco_hist.o
-
-# target to build an object file
-src/reco_hist.cpp.o:
-	$(MAKE) -f CMakeFiles/reco_hist.dir/build.make CMakeFiles/reco_hist.dir/src/reco_hist.cpp.o
-.PHONY : src/reco_hist.cpp.o
-
-src/reco_hist.i: src/reco_hist.cpp.i
-.PHONY : src/reco_hist.i
-
-# target to preprocess a source file
-src/reco_hist.cpp.i:
-	$(MAKE) -f CMakeFiles/reco_hist.dir/build.make CMakeFiles/reco_hist.dir/src/reco_hist.cpp.i
-.PHONY : src/reco_hist.cpp.i
-
-src/reco_hist.s: src/reco_hist.cpp.s
-.PHONY : src/reco_hist.s
-
-# target to generate assembly for a file
-src/reco_hist.cpp.s:
-	$(MAKE) -f CMakeFiles/reco_hist.dir/build.make CMakeFiles/reco_hist.dir/src/reco_hist.cpp.s
-.PHONY : src/reco_hist.cpp.s
-
-src/split_flags.o: src/split_flags.cpp.o
-.PHONY : src/split_flags.o
-
-# target to build an object file
-src/split_flags.cpp.o:
-	$(MAKE) -f CMakeFiles/split_flags.dir/build.make CMakeFiles/split_flags.dir/src/split_flags.cpp.o
-.PHONY : src/split_flags.cpp.o
-
-src/split_flags.i: src/split_flags.cpp.i
-.PHONY : src/split_flags.i
-
-# target to preprocess a source file
-src/split_flags.cpp.i:
-	$(MAKE) -f CMakeFiles/split_flags.dir/build.make CMakeFiles/split_flags.dir/src/split_flags.cpp.i
-.PHONY : src/split_flags.cpp.i
-
-src/split_flags.s: src/split_flags.cpp.s
-.PHONY : src/split_flags.s
-
-# target to generate assembly for a file
-src/split_flags.cpp.s:
-	$(MAKE) -f CMakeFiles/split_flags.dir/build.make CMakeFiles/split_flags.dir/src/split_flags.cpp.s
-.PHONY : src/split_flags.cpp.s
-
-src/test_color_space.o: src/test_color_space.cpp.o
-.PHONY : src/test_color_space.o
-
-# target to build an object file
-src/test_color_space.cpp.o:
-	$(MAKE) -f CMakeFiles/test_color_space.dir/build.make CMakeFiles/test_color_space.dir/src/test_color_space.cpp.o
-.PHONY : src/test_color_space.cpp.o
-
-src/test_color_space.i: src/test_color_space.cpp.i
-.PHONY : src/test_color_space.i
-
-# target to preprocess a source file
-src/test_color_space.cpp.i:
-	$(MAKE) -f CMakeFiles/test_color_space.dir/build.make CMakeFiles/test_color_space.dir/src/test_color_space.cpp.i
-.PHONY : src/test_color_space.cpp.i
-
-src/test_color_space.s: src/test_color_space.cpp.s
-.PHONY : src/test_color_space.s
-
-# target to generate assembly for a file
-src/test_color_space.cpp.s:
-	$(MAKE) -f CMakeFiles/test_color_space.dir/build.make CMakeFiles/test_color_space.dir/src/test_color_space.cpp.s
-.PHONY : src/test_color_space.cpp.s
 
 src/train_hist.o: src/train_hist.cpp.o
 .PHONY : src/train_hist.o
@@ -636,7 +501,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... reco_hist"
 	@echo "... rosbuild_clean-test-results"
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
@@ -645,12 +509,10 @@ help:
 	@echo "... rospack_gensrv"
 	@echo "... rospack_gensrv_all"
 	@echo "... run_tests"
-	@echo "... split_flags"
 	@echo "... test"
 	@echo "... test-future"
 	@echo "... test-results"
 	@echo "... test-results-run"
-	@echo "... test_color_space"
 	@echo "... tests"
 	@echo "... train_hist"
 	@echo "... gtest"
@@ -658,21 +520,9 @@ help:
 	@echo "... src/Histogram.o"
 	@echo "... src/Histogram.i"
 	@echo "... src/Histogram.s"
-	@echo "... src/RecoHist.o"
-	@echo "... src/RecoHist.i"
-	@echo "... src/RecoHist.s"
 	@echo "... src/TrainHist.o"
 	@echo "... src/TrainHist.i"
 	@echo "... src/TrainHist.s"
-	@echo "... src/reco_hist.o"
-	@echo "... src/reco_hist.i"
-	@echo "... src/reco_hist.s"
-	@echo "... src/split_flags.o"
-	@echo "... src/split_flags.i"
-	@echo "... src/split_flags.s"
-	@echo "... src/test_color_space.o"
-	@echo "... src/test_color_space.i"
-	@echo "... src/test_color_space.s"
 	@echo "... src/train_hist.o"
 	@echo "... src/train_hist.i"
 	@echo "... src/train_hist.s"

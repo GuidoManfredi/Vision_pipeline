@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/icaro/hand_track
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/icaro/hand_track/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hand_track.dir/depend.make
@@ -66,17 +66,22 @@ CMakeFiles/hand_track.dir/src/hand_track.cpp.o: /opt/ros/groovy/share/std_msgs/p
 CMakeFiles/hand_track.dir/src/hand_track.cpp.o: /opt/ros/groovy/share/rosgraph_msgs/package.xml
 CMakeFiles/hand_track.dir/src/hand_track.cpp.o: /opt/ros/groovy/share/xmlrpcpp/package.xml
 CMakeFiles/hand_track.dir/src/hand_track.cpp.o: /opt/ros/groovy/share/roscpp/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/icaro/hand_track/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/hand_track.dir/src/hand_track.cpp.o: /opt/ros/groovy/share/geometry_msgs/package.xml
+CMakeFiles/hand_track.dir/src/hand_track.cpp.o: /opt/ros/groovy/share/sensor_msgs/package.xml
+CMakeFiles/hand_track.dir/src/hand_track.cpp.o: /opt/ros/groovy/share/cv_bridge/package.xml
+CMakeFiles/hand_track.dir/src/hand_track.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/manifest.xml
+CMakeFiles/hand_track.dir/src/hand_track.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hand_track.dir/src/hand_track.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/hand_track.dir/src/hand_track.cpp.o -c /home/gmanfred/devel/ros/icaro/hand_track/src/hand_track.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/hand_track.dir/src/hand_track.cpp.o -c /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/src/hand_track.cpp
 
 CMakeFiles/hand_track.dir/src/hand_track.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hand_track.dir/src/hand_track.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/icaro/hand_track/src/hand_track.cpp > CMakeFiles/hand_track.dir/src/hand_track.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/src/hand_track.cpp > CMakeFiles/hand_track.dir/src/hand_track.cpp.i
 
 CMakeFiles/hand_track.dir/src/hand_track.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hand_track.dir/src/hand_track.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/icaro/hand_track/src/hand_track.cpp -o CMakeFiles/hand_track.dir/src/hand_track.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/src/hand_track.cpp -o CMakeFiles/hand_track.dir/src/hand_track.cpp.s
 
 CMakeFiles/hand_track.dir/src/hand_track.cpp.o.requires:
 .PHONY : CMakeFiles/hand_track.dir/src/hand_track.cpp.o.requires
@@ -104,17 +109,22 @@ CMakeFiles/hand_track.dir/src/Tracker.cpp.o: /opt/ros/groovy/share/std_msgs/pack
 CMakeFiles/hand_track.dir/src/Tracker.cpp.o: /opt/ros/groovy/share/rosgraph_msgs/package.xml
 CMakeFiles/hand_track.dir/src/Tracker.cpp.o: /opt/ros/groovy/share/xmlrpcpp/package.xml
 CMakeFiles/hand_track.dir/src/Tracker.cpp.o: /opt/ros/groovy/share/roscpp/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/icaro/hand_track/build/CMakeFiles $(CMAKE_PROGRESS_2)
+CMakeFiles/hand_track.dir/src/Tracker.cpp.o: /opt/ros/groovy/share/geometry_msgs/package.xml
+CMakeFiles/hand_track.dir/src/Tracker.cpp.o: /opt/ros/groovy/share/sensor_msgs/package.xml
+CMakeFiles/hand_track.dir/src/Tracker.cpp.o: /opt/ros/groovy/share/cv_bridge/package.xml
+CMakeFiles/hand_track.dir/src/Tracker.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/manifest.xml
+CMakeFiles/hand_track.dir/src/Tracker.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hand_track.dir/src/Tracker.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/hand_track.dir/src/Tracker.cpp.o -c /home/gmanfred/devel/ros/icaro/hand_track/src/Tracker.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/hand_track.dir/src/Tracker.cpp.o -c /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/src/Tracker.cpp
 
 CMakeFiles/hand_track.dir/src/Tracker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hand_track.dir/src/Tracker.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/icaro/hand_track/src/Tracker.cpp > CMakeFiles/hand_track.dir/src/Tracker.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/src/Tracker.cpp > CMakeFiles/hand_track.dir/src/Tracker.cpp.i
 
 CMakeFiles/hand_track.dir/src/Tracker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hand_track.dir/src/Tracker.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/icaro/hand_track/src/Tracker.cpp -o CMakeFiles/hand_track.dir/src/Tracker.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/src/Tracker.cpp -o CMakeFiles/hand_track.dir/src/Tracker.cpp.s
 
 CMakeFiles/hand_track.dir/src/Tracker.cpp.o.requires:
 .PHONY : CMakeFiles/hand_track.dir/src/Tracker.cpp.o.requires
@@ -153,6 +163,6 @@ CMakeFiles/hand_track.dir/clean:
 .PHONY : CMakeFiles/hand_track.dir/clean
 
 CMakeFiles/hand_track.dir/depend:
-	cd /home/gmanfred/devel/ros/icaro/hand_track/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/icaro/hand_track /home/gmanfred/devel/ros/icaro/hand_track /home/gmanfred/devel/ros/icaro/hand_track/build /home/gmanfred/devel/ros/icaro/hand_track/build /home/gmanfred/devel/ros/icaro/hand_track/build/CMakeFiles/hand_track.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build/CMakeFiles/hand_track.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hand_track.dir/depend
 

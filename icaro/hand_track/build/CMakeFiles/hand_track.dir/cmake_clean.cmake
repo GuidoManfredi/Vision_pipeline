@@ -1,4 +1,6 @@
 FILE(REMOVE_RECURSE
+  "../srv_gen"
+  "../src/hand_track/srv"
   "CMakeFiles/hand_track.dir/src/hand_track.cpp.o"
   "CMakeFiles/hand_track.dir/src/Tracker.cpp.o"
   "../bin/hand_track.pdb"

@@ -3,5 +3,5 @@
 
 CATKIN_SHELL=zsh
 emulate sh # emulate POSIX
-. "/home/gmanfred/devel/ros/icaro/hand_track/build/devel/setup.sh"
+. "/home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build/devel/setup.sh"
 emulate zsh # back to zsh mode

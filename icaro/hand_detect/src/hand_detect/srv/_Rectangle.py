@@ -102,20 +102,25 @@ python3 = True if sys.hexversion > 0x03000000 else False
 import genpy
 import struct
 
+import hand_detect.msg
 
 class RectangleResponse(genpy.Message):
-  _md5sum = "bde2ed7e7fbae64eb6bd2a19f9089384"
+  _md5sum = "c78a300dff07b60288103d0a98004613"
   _type = "hand_detect/RectangleResponse"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """int32[] x
-int32[] y
-int32[] width
-int32[] height
+  _full_text = """Rectangle[] rect
 
+
+================================================================================
+MSG: hand_detect/Rectangle
+int32 x
+int32 y
+int32 width
+int32 height
 
 """
-  __slots__ = ['x','y','width','height']
-  _slot_types = ['int32[]','int32[]','int32[]','int32[]']
+  __slots__ = ['rect']
+  _slot_types = ['hand_detect/Rectangle[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -125,7 +130,7 @@ int32[] height
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       x,y,width,height
+       rect
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -134,19 +139,10 @@ int32[] height
     if args or kwds:
       super(RectangleResponse, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.x is None:
-        self.x = []
-      if self.y is None:
-        self.y = []
-      if self.width is None:
-        self.width = []
-      if self.height is None:
-        self.height = []
+      if self.rect is None:
+        self.rect = []
     else:
-      self.x = []
-      self.y = []
-      self.width = []
-      self.height = []
+      self.rect = []
 
   def _get_types(self):
     """
@@ -160,22 +156,11 @@ int32[] height
     :param buff: buffer, ``StringIO``
     """
     try:
-      length = len(self.x)
+      length = len(self.rect)
       buff.write(_struct_I.pack(length))
-      pattern = '<%si'%length
-      buff.write(struct.pack(pattern, *self.x))
-      length = len(self.y)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%si'%length
-      buff.write(struct.pack(pattern, *self.y))
-      length = len(self.width)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%si'%length
-      buff.write(struct.pack(pattern, *self.width))
-      length = len(self.height)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%si'%length
-      buff.write(struct.pack(pattern, *self.height))
+      for val1 in self.rect:
+        _x = val1
+        buff.write(_struct_4i.pack(_x.x, _x.y, _x.width, _x.height))
     except struct.error as se: self._check_types(se)
     except TypeError as te: self._check_types(te)
 
@@ -185,35 +170,20 @@ int32[] height
     :param str: byte array of serialized message, ``str``
     """
     try:
+      if self.rect is None:
+        self.rect = None
       end = 0
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%si'%length
-      start = end
-      end += struct.calcsize(pattern)
-      self.x = struct.unpack(pattern, str[start:end])
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%si'%length
-      start = end
-      end += struct.calcsize(pattern)
-      self.y = struct.unpack(pattern, str[start:end])
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%si'%length
-      start = end
-      end += struct.calcsize(pattern)
-      self.width = struct.unpack(pattern, str[start:end])
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%si'%length
-      start = end
-      end += struct.calcsize(pattern)
-      self.height = struct.unpack(pattern, str[start:end])
+      self.rect = []
+      for i in range(0, length):
+        val1 = hand_detect.msg.Rectangle()
+        _x = val1
+        start = end
+        end += 16
+        (_x.x, _x.y, _x.width, _x.height,) = _struct_4i.unpack(str[start:end])
+        self.rect.append(val1)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -226,22 +196,11 @@ int32[] height
     :param numpy: numpy python module
     """
     try:
-      length = len(self.x)
+      length = len(self.rect)
       buff.write(_struct_I.pack(length))
-      pattern = '<%si'%length
-      buff.write(self.x.tostring())
-      length = len(self.y)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%si'%length
-      buff.write(self.y.tostring())
-      length = len(self.width)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%si'%length
-      buff.write(self.width.tostring())
-      length = len(self.height)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%si'%length
-      buff.write(self.height.tostring())
+      for val1 in self.rect:
+        _x = val1
+        buff.write(_struct_4i.pack(_x.x, _x.y, _x.width, _x.height))
     except struct.error as se: self._check_types(se)
     except TypeError as te: self._check_types(te)
 
@@ -252,42 +211,28 @@ int32[] height
     :param numpy: numpy python module
     """
     try:
+      if self.rect is None:
+        self.rect = None
       end = 0
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%si'%length
-      start = end
-      end += struct.calcsize(pattern)
-      self.x = numpy.frombuffer(str[start:end], dtype=numpy.int32, count=length)
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%si'%length
-      start = end
-      end += struct.calcsize(pattern)
-      self.y = numpy.frombuffer(str[start:end], dtype=numpy.int32, count=length)
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%si'%length
-      start = end
-      end += struct.calcsize(pattern)
-      self.width = numpy.frombuffer(str[start:end], dtype=numpy.int32, count=length)
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%si'%length
-      start = end
-      end += struct.calcsize(pattern)
-      self.height = numpy.frombuffer(str[start:end], dtype=numpy.int32, count=length)
+      self.rect = []
+      for i in range(0, length):
+        val1 = hand_detect.msg.Rectangle()
+        _x = val1
+        start = end
+        end += 16
+        (_x.x, _x.y, _x.width, _x.height,) = _struct_4i.unpack(str[start:end])
+        self.rect.append(val1)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
+_struct_4i = struct.Struct("<4i")
 class Rectangle(object):
   _type          = 'hand_detect/Rectangle'
-  _md5sum = '7b3273445f9c6b5167df425514d4189f'
+  _md5sum = '9a06a55897df399bd353353c13175d07'
   _request_class  = RectangleRequest
   _response_class = RectangleResponse

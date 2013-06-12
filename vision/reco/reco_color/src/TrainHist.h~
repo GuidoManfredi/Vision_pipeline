@@ -6,23 +6,50 @@
 #include <opencv2/highgui/highgui.hpp>
 
 #include "Histogram.h"
-
+/**
+ * This class trains a directory containing : various instances of the same class
+ * OR various poses of the same instance.
+ * It takes as input :
+ *					- the folder to train
+ *					- a list of separators
+ *					- a list of end names for each different file to load
+ *					- the interval of files to use (from number ... to number ...) or
+ *						 a percentage interval (from ...% to ...%).
+ * The class first looks for a already present training file.
+ * If training file available for a part of the poses/instances,
+ * it asks if want to override them, if not it loads them and continue processing.
+ * After processing a file, the file name and descriptor are saved to a
+ *	unique training file.
+ * After extracting features from all poses/instances and saving them,
+ * it merges them to obtain a unique instance/class descriptor.
+ * The results are gathered in a unique file containing in each line:
+ * 		- the name of the pose(instance folder)/instance(class folder)/class(whole dataset).
+ *		- the descriptor
+ * If the processing is stopped, whatever the reason, the training restarts at the last 
+ * processed file, or the next one (two modes available).
+**/
 class TrainHist
 {
  public:
  	TrainHist ();
+ 	bool train (std::string dir, 
+ 							std::vector<std::string> separators,
+ 							std::vector<std::string> names,
+ 							int* interval);
  	/**
  	 * Input : a directory containing a directory for each instance of the class.
  	 		OR an instance directory containing various training files.
  	 * Output : a boolean telling if everything went right.
  	**/ 	
- 	bool train (std::string class_dir);
+	bool train (std::string dir);
  	/**
  	 * Input : a path to a xml file containing objects names and descriptors.
  	 *	       The new object name and descriptor will be added to the list.
+ 	 *				 a boolean telling if the whole file must be overriden or if
+ 	 *				 data must be haded to the end of file.
  	 * Output : a boolean telling if everything went right.
  	 **/
- 	bool save_training (std::string path);
+ 	bool save_training (std::string path, bool override);
  	/**
  	 * Input : a path to a xml file containing ONE object name and descriptors.
  	 *	       They will be added to the current list.
@@ -33,14 +60,20 @@ class TrainHist
  	 * Erase the name and all descriptors of the current object;
  	 **/
  	void clear_training ();
- private:
+// private:
  	/**
  	 * Check if dir is a directory. If no name has been asined to the object, use
  	 * the dir name as name. Check if the directory has already been trained. If not
  	 * train it, mark it as trained and save the results in the directory.
  	 **/
  	bool train_directory (std::string dir);
+ 	bool train_directory (std::string dir,
+					 							std::vector<std::string> separators,
+ 												std::vector<std::string> names,
+					 							int* interval);
  	bool train_file (std::string file);
+	bool already_trained (std::string path);
+	std::string path2name (std::string path);
  	/**
  	 * Input : a filename containing the required type of data, depending on
  	 *				 which type of information to extract.
@@ -48,16 +81,13 @@ class TrainHist
  	 *					the recognition nodes so they can send back a descriptor.
  	 **/
 	cv::Mat extract (std::string file, std::string mask);
-	cv::Mat merge (std::vector<cv::Mat> descriptors);
-	std::string path2name (std::string path);
-	bool already_trained (std::string path);
-	void mark_as_trained (std::string path);
-	std::string get_mask (std::string file);
+	cv::Mat merge (cv::Mat descriptor1, cv::Mat descriptor2);
 	bool is_image (std::string file);
+	std::string get_mask (std::string file);
 	
 	Histogram hist;
-	std::vector<cv::Mat> _vec_descriptors;
-	std::string _name;
+	cv::Mat _descriptor;
 	// Name of the file containing the names of already trained files and folders
 	std::string _trained_files;
+	std::string _training_results;
 };

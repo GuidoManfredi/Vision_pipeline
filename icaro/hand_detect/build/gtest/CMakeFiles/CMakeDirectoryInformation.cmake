@@ -3,14 +3,16 @@
 
 # Relative path conversion top directories.
 SET(CMAKE_RELATIVE_PATH_TOP_SOURCE "/usr/src/gtest")
-SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/gmanfred/devel/ros/icaro/hand_detect/build")
+SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build")
 
 # Force unix paths in dependencies.
 SET(CMAKE_FORCE_UNIX_PATHS 1)
 
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
-  "/home/gmanfred/devel/ros/icaro/hand_detect/include"
+  "/home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/include"
+  "/home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/msg_gen/cpp/include"
+  "/home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/srv_gen/cpp/include"
   "/opt/ros/groovy/include/opencv"
   "/opt/ros/groovy/include"
   "/usr/src/gtest/include"

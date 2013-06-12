@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/icaro/hand_detect
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/icaro/hand_detect/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build
 
 # Utility rule file for ROSBUILD_gensrv_py.
 
@@ -47,39 +47,43 @@ include CMakeFiles/ROSBUILD_gensrv_py.dir/progress.make
 
 CMakeFiles/ROSBUILD_gensrv_py: ../src/hand_detect/srv/__init__.py
 
-../src/hand_detect/srv/__init__.py: ../src/hand_detect/srv/_Rectangle.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/icaro/hand_detect/build/CMakeFiles $(CMAKE_PROGRESS_1)
+../src/hand_detect/srv/__init__.py: ../src/hand_detect/srv/_HandDetection.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hand_detect/srv/__init__.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py --initpy /home/gmanfred/devel/ros/icaro/hand_detect/srv/Rectangle.srv
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py --initpy /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/srv/HandDetection.srv
 
-../src/hand_detect/srv/_Rectangle.py: ../srv/Rectangle.srv
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/lib/roslib/gendeps
-../src/hand_detect/srv/_Rectangle.py: ../manifest.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/catkin/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/opencv2/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/cpp_common/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/rostime/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/roscpp_traits/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/genmsg/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/genpy/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/message_runtime/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/rosconsole/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/std_msgs/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/roscpp/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/geometry_msgs/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/sensor_msgs/package.xml
-../src/hand_detect/srv/_Rectangle.py: /opt/ros/groovy/share/cv_bridge/package.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/icaro/hand_detect/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hand_detect/srv/_Rectangle.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/gmanfred/devel/ros/icaro/hand_detect/srv/Rectangle.srv
+../src/hand_detect/srv/_HandDetection.py: ../srv/HandDetection.srv
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/hand_detect/srv/_HandDetection.py: ../manifest.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/catkin/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/opencv2/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/cpp_common/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/rostime/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/roscpp_traits/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/roscpp_serialization/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/genmsg/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/genpy/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/message_runtime/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/rosconsole/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/std_msgs/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/rosgraph_msgs/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/xmlrpcpp/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/roscpp/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/geometry_msgs/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/sensor_msgs/package.xml
+../src/hand_detect/srv/_HandDetection.py: /opt/ros/groovy/share/cv_bridge/package.xml
+../src/hand_detect/srv/_HandDetection.py: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/manifest.xml
+../src/hand_detect/srv/_HandDetection.py: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/manifest.xml
+../src/hand_detect/srv/_HandDetection.py: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/msg_gen/generated
+../src/hand_detect/srv/_HandDetection.py: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/hand_detect/srv/_HandDetection.py"
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/srv/HandDetection.srv
 
 ROSBUILD_gensrv_py: CMakeFiles/ROSBUILD_gensrv_py
 ROSBUILD_gensrv_py: ../src/hand_detect/srv/__init__.py
-ROSBUILD_gensrv_py: ../src/hand_detect/srv/_Rectangle.py
+ROSBUILD_gensrv_py: ../src/hand_detect/srv/_HandDetection.py
 ROSBUILD_gensrv_py: CMakeFiles/ROSBUILD_gensrv_py.dir/build.make
 .PHONY : ROSBUILD_gensrv_py
 
@@ -92,6 +96,6 @@ CMakeFiles/ROSBUILD_gensrv_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_gensrv_py.dir/clean
 
 CMakeFiles/ROSBUILD_gensrv_py.dir/depend:
-	cd /home/gmanfred/devel/ros/icaro/hand_detect/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/icaro/hand_detect /home/gmanfred/devel/ros/icaro/hand_detect /home/gmanfred/devel/ros/icaro/hand_detect/build /home/gmanfred/devel/ros/icaro/hand_detect/build /home/gmanfred/devel/ros/icaro/hand_detect/build/CMakeFiles/ROSBUILD_gensrv_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build/CMakeFiles/ROSBUILD_gensrv_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_gensrv_py.dir/depend
 

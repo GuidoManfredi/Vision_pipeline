@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-  "/home/gmanfred/devel/ros/icaro/hand_detect/lib/libgtest.pdb"
-  "/home/gmanfred/devel/ros/icaro/hand_detect/lib/libgtest.so"
+  "/home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/lib/libgtest.pdb"
+  "/home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/lib/libgtest.so"
 )
 
 # Per-language clean rules from dependency scanning.

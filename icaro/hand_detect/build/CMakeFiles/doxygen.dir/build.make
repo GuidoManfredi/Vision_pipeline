@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/icaro/hand_detect
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/icaro/hand_detect/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build
 
 # Utility rule file for doxygen.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/icaro/hand_detect/build
 include CMakeFiles/doxygen.dir/progress.make
 
 CMakeFiles/doxygen:
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/icaro/hand_detect/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "doxygen found"
 
 doxygen: CMakeFiles/doxygen
@@ -62,6 +62,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/gmanfred/devel/ros/icaro/hand_detect/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/icaro/hand_detect /home/gmanfred/devel/ros/icaro/hand_detect /home/gmanfred/devel/ros/icaro/hand_detect/build /home/gmanfred/devel/ros/icaro/hand_detect/build /home/gmanfred/devel/ros/icaro/hand_detect/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

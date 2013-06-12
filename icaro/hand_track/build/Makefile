@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/icaro/hand_track
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/icaro/hand_track/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,9 +110,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/icaro/hand_track/build/CMakeFiles /home/gmanfred/devel/ros/icaro/hand_track/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build/CMakeFiles /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/icaro/hand_track/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -166,6 +166,19 @@ ROSBUILD_gensrv_cpp/fast:
 .PHONY : ROSBUILD_gensrv_cpp/fast
 
 #=============================================================================
+# Target rules for targets named ROSBUILD_gensrv_py
+
+# Build rule for target.
+ROSBUILD_gensrv_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ROSBUILD_gensrv_py
+.PHONY : ROSBUILD_gensrv_py
+
+# fast build rule for target.
+ROSBUILD_gensrv_py/fast:
+	$(MAKE) -f CMakeFiles/ROSBUILD_gensrv_py.dir/build.make CMakeFiles/ROSBUILD_gensrv_py.dir/build
+.PHONY : ROSBUILD_gensrv_py/fast
+
+#=============================================================================
 # Target rules for targets named clean_test_results
 
 # Build rule for target.
@@ -177,6 +190,19 @@ clean_test_results: cmake_check_build_system
 clean_test_results/fast:
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
 .PHONY : clean_test_results/fast
+
+#=============================================================================
+# Target rules for targets named demo
+
+# Build rule for target.
+demo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 demo
+.PHONY : demo
+
+# fast build rule for target.
+demo/fast:
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/build
+.PHONY : demo/fast
 
 #=============================================================================
 # Target rules for targets named doxygen
@@ -257,6 +283,19 @@ rospack_genmsg/fast:
 .PHONY : rospack_genmsg/fast
 
 #=============================================================================
+# Target rules for targets named rospack_genmsg_all
+
+# Build rule for target.
+rospack_genmsg_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rospack_genmsg_all
+.PHONY : rospack_genmsg_all
+
+# fast build rule for target.
+rospack_genmsg_all/fast:
+	$(MAKE) -f CMakeFiles/rospack_genmsg_all.dir/build.make CMakeFiles/rospack_genmsg_all.dir/build
+.PHONY : rospack_genmsg_all/fast
+
+#=============================================================================
 # Target rules for targets named rospack_genmsg_libexe
 
 # Build rule for target.
@@ -281,6 +320,19 @@ rospack_gensrv: cmake_check_build_system
 rospack_gensrv/fast:
 	$(MAKE) -f CMakeFiles/rospack_gensrv.dir/build.make CMakeFiles/rospack_gensrv.dir/build
 .PHONY : rospack_gensrv/fast
+
+#=============================================================================
+# Target rules for targets named rospack_gensrv_all
+
+# Build rule for target.
+rospack_gensrv_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rospack_gensrv_all
+.PHONY : rospack_gensrv_all
+
+# fast build rule for target.
+rospack_gensrv_all/fast:
+	$(MAKE) -f CMakeFiles/rospack_gensrv_all.dir/build.make CMakeFiles/rospack_gensrv_all.dir/build
+.PHONY : rospack_gensrv_all/fast
 
 #=============================================================================
 # Target rules for targets named run_tests
@@ -410,6 +462,30 @@ src/Tracker.cpp.s:
 	$(MAKE) -f CMakeFiles/hand_track.dir/build.make CMakeFiles/hand_track.dir/src/Tracker.cpp.s
 .PHONY : src/Tracker.cpp.s
 
+src/demo.o: src/demo.cpp.o
+.PHONY : src/demo.o
+
+# target to build an object file
+src/demo.cpp.o:
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/demo.cpp.o
+.PHONY : src/demo.cpp.o
+
+src/demo.i: src/demo.cpp.i
+.PHONY : src/demo.i
+
+# target to preprocess a source file
+src/demo.cpp.i:
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/demo.cpp.i
+.PHONY : src/demo.cpp.i
+
+src/demo.s: src/demo.cpp.s
+.PHONY : src/demo.s
+
+# target to generate assembly for a file
+src/demo.cpp.s:
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/demo.cpp.s
+.PHONY : src/demo.cpp.s
+
 src/hand_track.o: src/hand_track.cpp.o
 .PHONY : src/hand_track.o
 
@@ -442,7 +518,9 @@ help:
 	@echo "... depend"
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_gensrv_cpp"
+	@echo "... ROSBUILD_gensrv_py"
 	@echo "... clean_test_results"
+	@echo "... demo"
 	@echo "... doxygen"
 	@echo "... edit_cache"
 	@echo "... hand_track"
@@ -455,8 +533,10 @@ help:
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
 	@echo "... rospack_genmsg"
+	@echo "... rospack_genmsg_all"
 	@echo "... rospack_genmsg_libexe"
 	@echo "... rospack_gensrv"
+	@echo "... rospack_gensrv_all"
 	@echo "... run_tests"
 	@echo "... test"
 	@echo "... test-future"
@@ -468,6 +548,9 @@ help:
 	@echo "... src/Tracker.o"
 	@echo "... src/Tracker.i"
 	@echo "... src/Tracker.s"
+	@echo "... src/demo.o"
+	@echo "... src/demo.i"
+	@echo "... src/demo.s"
 	@echo "... src/hand_track.o"
 	@echo "... src/hand_track.i"
 	@echo "... src/hand_track.s"

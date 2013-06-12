@@ -1,4 +1,6 @@
 FILE(REMOVE_RECURSE
+  "../srv_gen"
+  "../src/hand_track/srv"
   "CMakeFiles/rosbuild_precompile"
 )
 

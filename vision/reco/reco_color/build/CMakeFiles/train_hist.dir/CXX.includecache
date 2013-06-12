@@ -6,17 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/gmanfred/devel/ros/packs/vision/reco/reco_color/src/Histogram.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/Histogram.cpp
+Histogram.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/Histogram.h
+
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/Histogram.h
 iostream
 -
 opencv2/imgproc/imgproc.hpp
 -
 
-/home/gmanfred/devel/ros/packs/vision/reco/reco_color/src/TrainHist.cpp
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/TrainHist.cpp
 TrainHist.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_color/src/TrainHist.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/TrainHist.h
 
-/home/gmanfred/devel/ros/packs/vision/reco/reco_color/src/TrainHist.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/TrainHist.h
 iostream
 -
 fstream
@@ -30,7 +34,17 @@ opencv2/imgproc/imgproc.hpp
 opencv2/highgui/highgui.hpp
 -
 Histogram.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_color/src/Histogram.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/Histogram.h
+
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/train_hist.cpp
+iostream
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+TrainHist.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/TrainHist.h
 
 /opt/ros/groovy/include/opencv2/core/core.hpp
 opencv2/core/types_c.h

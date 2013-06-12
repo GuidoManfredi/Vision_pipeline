@@ -31,8 +31,11 @@ CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /opt/ros/groovy/include/opencv2/v
 CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /opt/ros/groovy/include/opencv2/video/tracking.hpp
 CMakeFiles/hand_detect.dir/src/Detector.cpp.o: /opt/ros/groovy/include/opencv2/video/video.hpp
 
+CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: ../srv_gen/cpp/include/hand_detect/HandDetection.h
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: ../src/Detector.h
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: ../src/hand_detect.cpp
+CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_msgs/msg_gen/cpp/include/hand_msgs/Rectangle.h
+CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_track/srv_gen/cpp/include/hand_track/HandTrack.h
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /opt/ros/groovy/include/XmlRpcDecl.h
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /opt/ros/groovy/include/XmlRpcValue.h
 CMakeFiles/hand_detect.dir/src/hand_detect.cpp.o: /opt/ros/groovy/include/cv_bridge/cv_bridge.h
