@@ -32,16 +32,15 @@ class TrainHist
 {
  public:
  	TrainHist ();
- 	bool train (std::string dir, 
- 							std::vector<std::string> separators,
- 							std::vector<std::string> names,
- 							int* interval);
  	/**
  	 * Input : a directory containing a directory for each instance of the class.
  	 		OR an instance directory containing various training files.
  	 * Output : a boolean telling if everything went right.
  	**/ 	
-	bool train (std::string dir);
+ 	bool train (std::string dir, 
+ 							std::vector<std::string> separators,
+ 							std::vector<std::string> names,
+ 							float* interval);
  	/**
  	 * Input : a path to a xml file containing objects names and descriptors.
  	 *	       The new object name and descriptor will be added to the list.
@@ -66,22 +65,28 @@ class TrainHist
  	 * the dir name as name. Check if the directory has already been trained. If not
  	 * train it, mark it as trained and save the results in the directory.
  	 **/
- 	bool train_directory (std::string dir);
+ 	//bool train_directory (std::string dir);
  	bool train_directory (std::string dir,
 					 							std::vector<std::string> separators,
  												std::vector<std::string> names,
-					 							int* interval);
- 	bool train_file (std::string file);
+					 							float* interval);
+ 	bool train_file (std::string path, std::vector<std::string> separators,
+						 												std::vector<std::string> names);
+	bool save_descriptor (std::string path, cv::Mat descriptor, bool override);
 	bool already_trained (std::string path);
 	std::string path2name (std::string path);
+	std::string path2rest (std::string path);
+	std::string path2rest (std::string path, std::string separator);
  	/**
  	 * Input : a filename containing the required type of data, depending on
  	 *				 which type of information to extract.
  	 * Output : depends on information to extract. Some data to be processed by
  	 *					the recognition nodes so they can send back a descriptor.
  	 **/
-	cv::Mat extract (std::string file, std::string mask);
+	cv::Mat extract (std::string path, std::vector<std::string> separators,
+										 												std::vector<std::string> names);
 	cv::Mat merge (cv::Mat descriptor1, cv::Mat descriptor2);
+	bool is_right (std::string file, std::string separator, std::string name);
 	bool is_image (std::string file);
 	std::string get_mask (std::string file);
 	

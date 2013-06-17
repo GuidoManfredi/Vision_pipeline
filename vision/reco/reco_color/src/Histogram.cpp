@@ -22,7 +22,7 @@ Mat Histogram::spatial_histogram (Mat img, int nbins) {
 
 Mat Histogram::classic_histogram (Mat img, Mat mask, int nbins) {
 	Mat hsv;
-	cvtColor( img, hsv, CV_BGR2HSV );
+	cvtColor (img, hsv, CV_BGR2HSV);
   /// Using 10 bins for hue and 10 for saturation
   int h_bins = 10; int s_bins = 10;
   int histSize[] = { h_bins, s_bins };

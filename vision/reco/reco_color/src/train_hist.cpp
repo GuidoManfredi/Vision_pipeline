@@ -30,7 +30,16 @@ int main (int argc, char** argv) {
 	trainer.save_training ("/home/gmanfred/Desktop/training_results.xml");
 	*/
 	TrainHist trainer;
-	trainer.already_trained ("");
+	float * interval = (float*)malloc(2*sizeof(float));
+	interval[0] = 0.0;
+	interval[1] = 0.75;
+	vector<string> names;
+	names.push_back("crop.png");
+	names.push_back("maskcrop.png");
+	vector<string> sep;
+	sep.push_back("_");
+	sep.push_back("_");
+	trainer.train (argv[1], sep, names, interval);
 	return 0;
 }
 

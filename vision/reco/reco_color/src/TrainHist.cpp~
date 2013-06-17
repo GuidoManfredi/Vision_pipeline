@@ -3,6 +3,7 @@
 using namespace std;
 using namespace cv;
 using namespace boost::filesystem;
+typedef vector<path> vec_path;
 
 ////////////////////////////////////////////////////////////////////////////////
 //	PUBLIC METHODS
@@ -11,30 +12,25 @@ TrainHist::TrainHist () {
 	_training_results = "training_results.xml";
 }
 
-bool train (std::string dir,
+bool TrainHist::train (std::string dir,
 						std::vector<std::string> separators,
 						std::vector<std::string> names,
-						int[2] interval) {
-	if (_name.empty()) _name = path2name (dir);
+						float* interval) {
 	return train_directory (dir, separators, names, interval);
 }
 
-bool TrainHist::train (string dir) {
-	if (_name.empty()) _name = path2name (dir);
-	train_directory (dir);
-	return true;
-}
-
 bool TrainHist::save_training (string path, bool override) {
+	string name = path2name(path);
+	string result_path = path2rest(path) + _training_results;
 	FileStorage fw;
 	int mode;
 	override? (mode=FileStorage::WRITE) : (mode=FileStorage::APPEND);
 
-	if (!fw.open(path, mode)){
+	if (!fw.open(result_path, mode)){
 		cout << "save_training : couldn't open " << path << endl;
 		return false;
 	}
-	fw << _name << _descriptor;
+	fw << name << _descriptor;
 	fw.release();
 	return true;
 }
@@ -57,7 +53,6 @@ bool TrainHist::load_training (string path) {
 
 void TrainHist::clear_training () {
 	_descriptor = Mat();
-	_name = "";
 }
 ////////////////////////////////////////////////////////////////////////////////
 //	PRIVATE METHODS
@@ -65,7 +60,7 @@ void TrainHist::clear_training () {
 bool TrainHist::train_directory (std::string dir,
 										 							std::vector<std::string> separators,
  																	std::vector<std::string> names,
-										 							int* interval) {
+										 							float* interval) {
 	// Check if dir is a directory
 	if (!is_directory (dir)) {
 		cout << dir << " not a directory." << endl;
@@ -77,31 +72,47 @@ bool TrainHist::train_directory (std::string dir,
 	} else {
 		// train it
 		// sort, directory iteration is not ordered
-    Vec_path v; // so we can sort them later
+    vec_path v; // so we can sort them later
     copy(directory_iterator(dir), directory_iterator(), back_inserter(v));
     sort(v.begin(), v.end());
 		// compute number of files
-		/*
     int n = v.size ();
-    int iStart = n*fStart;
-    int iEnd = n*fEnd;
-    */
-    for (int i = interval[0]; i < interval[1]; ++i)
-    {
+    int start = n*interval[0];
+    int end = n*interval[1];
+    for (int i = start; i < end; ++i) {
 			if (is_directory(v[i].string()))
-				train_directory (i->path().string());
-			else if (is_image (i->path().string()))
-				train_file (i->path().string());
+				train_directory (v[i].string(), separators, names, interval);
+			// must match main/first file format
+			else if (is_right (v[i].string(), separators[0], names[0]))
+				train_file (v[i].string(), separators, names);
+			//else
+				//train_file (v[i].string(), separators, names);
 		}
 	}
 	return true;
 }
 
-bool TrainHist::train_file (string file) {
-	string maskfile = get_mask (file);
-	Mat descriptor = extract (file, maskfile);
-	_vec_descriptors.push_back (descriptor);
-	mark_as_trained (file);
+bool TrainHist::train_file (string path, vector<string> separators,
+ 																					vector<string> names) {
+	Mat descriptor = extract (path, separators, names);
+	_descriptor = merge (descriptor, _descriptor);
+	save_descriptor (path, descriptor, false);
+	return true;
+}
+
+bool TrainHist::save_descriptor (string path, Mat descriptor, bool override) {
+	string name = path2name(path);
+	string result_path = path2rest(path) + _training_results;
+	FileStorage fw;
+	int mode;
+	override? (mode=FileStorage::WRITE) : (mode=FileStorage::APPEND);
+
+	if (!fw.open(result_path, mode)){
+		cout << "save_training : couldn't open " << path << endl;
+		return false;
+	}
+	fw << name << descriptor;
+	fw.release();
 	return true;
 }
 
@@ -133,35 +144,47 @@ string TrainHist::path2name (string path) {
 }
 
 string TrainHist::path2rest (string path) {
+	return path2rest (path, "/");
+}
+
+string TrainHist::path2rest (string path, string separator) {
 	vector<string> splitted;
-	boost::split (splitted, path, boost::algorithm::is_any_of("/"));
+	boost::split (splitted, path, boost::algorithm::is_any_of(separator));
 	string rest;
 	for (size_t i=0; i<splitted.size()-1; ++i) // all but last part
-		rest += splitted[i] + "/";
+		rest += splitted[i] + separator;
 	return rest;
 }
 ////////////////////////////////////////////////////////////////////////////////
 //  Modify these functions depending on the type of descriptor. The rest should
-//	generic as long as the descriptor can be written in a cv::Mat class.
+//	be generic as long as the descriptor can be written in a cv::Mat class.
 ////////////////////////////////////////////////////////////////////////////////
-Mat TrainHist::extract (string file, string maskfile) {
-	Mat mask = imread(maskfile);
-  Mat img = imread(file);
+Mat TrainHist::extract (string path, vector<string> separators,
+ 																		 vector<string> names) {
+	//return Mat::eye(3, 3, 1);
+	string base = path2rest(path, separators[0]);
+	string imgpath = base + names[0];
+	base = path2rest(path, separators[1]);
+	string maskpath = base + names[1];
+  Mat img = imread(imgpath, CV_LOAD_IMAGE_COLOR);
+ 	Mat mask = imread(maskpath, CV_LOAD_IMAGE_GRAYSCALE);
   Mat desc = hist.classic_histogram (img, mask, 3);
-  cout << desc.cols << " " << desc.rows << endl;
+  
+  cout << desc << endl;
+  
   return desc;
 }
 
 Mat TrainHist::merge (Mat descriptor1, Mat descriptor2) {
-	Mat desc = descriptors1 + descriptor2;
+	Mat desc = descriptor1 + descriptor2;
 	normalize (desc, desc, 0, 1, NORM_MINMAX, -1, Mat() );
 	return desc;
 }
 
-bool TrainHist::is_image (string file) {
+bool TrainHist::is_right (string file, string separator, string name) {
 	vector<string> splitted;
-	boost::split (splitted, file, boost::algorithm::is_any_of("_"));
-	if (splitted[splitted.size()-1] == "crop.png")
+	boost::split (splitted, file, boost::algorithm::is_any_of(separator));
+	if (splitted[splitted.size()-1] == name)
 		return true;
 	else
 		return false;
@@ -177,62 +200,3 @@ string TrainHist::get_mask (string file) {
 	return mask;
 }
 
-/*
-bool TrainHist::train_class (string class_dir) {
-	_name = path2name (class_dir);
-	if (is_directory (class_dir)) {
-		directory_iterator end_itr;
-    for (directory_iterator i (class_dir); i != end_itr; ++i)
-    	train_instance (i->path().string());
-	}
-	else {
-		cout << class_dir << " not a directory." << endl;
-		return false;
-	}
-	
-	save_training (class_dir+"/training_results.xml", FileStorage::WRITE);
-	return true;
-}
-
-bool TrainHist::train_instance (string instance_dir) {
-	if (_name.empty()) _name = path2name (instance_dir);
-	train_directory (instance_dir);
-	return true;
-}
-*/
-
-/*
-bool TrainHist::train_list (string list) {
-	ifstream file (list.c_str());
-	if (!file.is_open ())	{
-		cout << "Couldn't open list file " << list.c_str() << ". Aborting." << endl;
-		return -1;
-	}
-
-	string path;
-	while (getline (file, path)) {
-		if (is_directory (path))
-			train_directory (path);
-		else
-			train_file (path);
-	}
-	
-	return true;
-}
-*/
-
-
-/*
-void TrainHist::mark_as_trained (string path) {
-	ofstream myfile (_trained_files.c_str(), std::ifstream::app);
-	if (!myfile.is_open ())	{
-		cout << "Couldn't open file " << _trained_files.c_str() << ". Aborting." << endl;
-		return;
-	}
-  
-  myfile << path2name(path) << endl;
-  myfile.close();
-  
- 	//cout << "Marked " << path << " as trained." << endl;
-}
-*/
