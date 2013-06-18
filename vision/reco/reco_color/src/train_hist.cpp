@@ -32,7 +32,7 @@ int main (int argc, char** argv) {
 	TrainHist trainer;
 	float * interval = (float*)malloc(2*sizeof(float));
 	interval[0] = 0.0;
-	interval[1] = 0.75;
+	interval[1] = 1.0;
 	vector<string> names;
 	names.push_back("crop.png");
 	names.push_back("maskcrop.png");

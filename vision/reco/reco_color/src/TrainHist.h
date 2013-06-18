@@ -92,7 +92,5 @@ class TrainHist
 	
 	Histogram hist;
 	cv::Mat _descriptor;
-	// Name of the file containing the names of already trained files and folders
-	std::string _trained_files;
 	std::string _training_results;
 };

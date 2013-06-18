@@ -28,6 +28,7 @@ rosbuild_gensrv()
 #rosbuild_add_executable(reco_hist src/reco_hist.cpp src/RecoHist.cpp)
 
 rosbuild_add_executable(train_hist src/train_hist.cpp src/TrainHist.cpp src/Histogram.cpp)
+rosbuild_add_executable(clear_training src/clear_training.cpp)
 #rosbuild_add_executable(test_color_space src/test_color_space.cpp)
 #rosbuild_add_executable(split_flags src/split_flags.cpp)
 #target_link_libraries(example ${PROJECT_NAME})

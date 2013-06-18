@@ -37,8 +37,8 @@ int main (int argc, char** argv) {
 	names.push_back("crop.png");
 	names.push_back("maskcrop.png");
 	vector<string> sep;
-	names.push_back("_");
-	names.push_back("_");
+	sep.push_back("_");
+	sep.push_back("_");
 	trainer.train (argv[1], sep, names, interval);
 	return 0;
 }

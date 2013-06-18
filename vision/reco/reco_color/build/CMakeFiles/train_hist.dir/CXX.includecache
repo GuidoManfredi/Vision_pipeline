@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/Histogram.cpp
-Histogram.h
-/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/Histogram.h
-
 /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/Histogram.h
 iostream
 -

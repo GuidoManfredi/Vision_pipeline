@@ -192,6 +192,19 @@ clean_test_results/fast:
 .PHONY : clean_test_results/fast
 
 #=============================================================================
+# Target rules for targets named clear_training
+
+# Build rule for target.
+clear_training: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clear_training
+.PHONY : clear_training
+
+# fast build rule for target.
+clear_training/fast:
+	$(MAKE) -f CMakeFiles/clear_training.dir/build.make CMakeFiles/clear_training.dir/build
+.PHONY : clear_training/fast
+
+#=============================================================================
 # Target rules for targets named doxygen
 
 # Build rule for target.
@@ -460,6 +473,30 @@ src/TrainHist.cpp.s:
 	$(MAKE) -f CMakeFiles/train_hist.dir/build.make CMakeFiles/train_hist.dir/src/TrainHist.cpp.s
 .PHONY : src/TrainHist.cpp.s
 
+src/clear_training.o: src/clear_training.cpp.o
+.PHONY : src/clear_training.o
+
+# target to build an object file
+src/clear_training.cpp.o:
+	$(MAKE) -f CMakeFiles/clear_training.dir/build.make CMakeFiles/clear_training.dir/src/clear_training.cpp.o
+.PHONY : src/clear_training.cpp.o
+
+src/clear_training.i: src/clear_training.cpp.i
+.PHONY : src/clear_training.i
+
+# target to preprocess a source file
+src/clear_training.cpp.i:
+	$(MAKE) -f CMakeFiles/clear_training.dir/build.make CMakeFiles/clear_training.dir/src/clear_training.cpp.i
+.PHONY : src/clear_training.cpp.i
+
+src/clear_training.s: src/clear_training.cpp.s
+.PHONY : src/clear_training.s
+
+# target to generate assembly for a file
+src/clear_training.cpp.s:
+	$(MAKE) -f CMakeFiles/clear_training.dir/build.make CMakeFiles/clear_training.dir/src/clear_training.cpp.s
+.PHONY : src/clear_training.cpp.s
+
 src/train_hist.o: src/train_hist.cpp.o
 .PHONY : src/train_hist.o
 
@@ -494,6 +531,7 @@ help:
 	@echo "... ROSBUILD_gensrv_cpp"
 	@echo "... ROSBUILD_gensrv_py"
 	@echo "... clean_test_results"
+	@echo "... clear_training"
 	@echo "... doxygen"
 	@echo "... edit_cache"
 	@echo "... install"
@@ -523,6 +561,9 @@ help:
 	@echo "... src/TrainHist.o"
 	@echo "... src/TrainHist.i"
 	@echo "... src/TrainHist.s"
+	@echo "... src/clear_training.o"
+	@echo "... src/clear_training.i"
+	@echo "... src/clear_training.s"
 	@echo "... src/train_hist.o"
 	@echo "... src/train_hist.i"
 	@echo "... src/train_hist.s"

@@ -76,7 +76,7 @@ class TrainHist
 	bool already_trained (std::string path);
 	std::string path2name (std::string path);
 	std::string path2rest (std::string path);
-	string path2rest (string path, string separator);
+	std::string path2rest (std::string path, std::string separator);
  	/**
  	 * Input : a filename containing the required type of data, depending on
  	 *				 which type of information to extract.
@@ -93,6 +93,5 @@ class TrainHist
 	Histogram hist;
 	cv::Mat _descriptor;
 	// Name of the file containing the names of already trained files and folders
-	std::string _trained_files;
 	std::string _training_results;
 };

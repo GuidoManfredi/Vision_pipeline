@@ -177,13 +177,48 @@ clean: CMakeFiles/clean_test_results.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/clear_training.dir
+
+# All Build rule for target.
+CMakeFiles/clear_training.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/clear_training.dir/build.make CMakeFiles/clear_training.dir/depend
+	$(MAKE) -f CMakeFiles/clear_training.dir/build.make CMakeFiles/clear_training.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles  4
+	@echo "Built target clear_training"
+.PHONY : CMakeFiles/clear_training.dir/all
+
+# Include target in all.
+all: CMakeFiles/clear_training.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/clear_training.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clear_training.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles 0
+.PHONY : CMakeFiles/clear_training.dir/rule
+
+# Convenience name for target.
+clear_training: CMakeFiles/clear_training.dir/rule
+.PHONY : clear_training
+
+# clean rule for target.
+CMakeFiles/clear_training.dir/clean:
+	$(MAKE) -f CMakeFiles/clear_training.dir/build.make CMakeFiles/clear_training.dir/clean
+.PHONY : CMakeFiles/clear_training.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/clear_training.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
 
 # All Build rule for target.
 CMakeFiles/doxygen.dir/all:
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/depend
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles  5
 	@echo "Built target doxygen"
 .PHONY : CMakeFiles/doxygen.dir/all
 
@@ -242,8 +277,8 @@ clean: CMakeFiles/rosbuild_clean-test-results.dir/clean
 # Target rules for target CMakeFiles/rosbuild_precompile.dir
 
 # All Build rule for target.
-CMakeFiles/rosbuild_precompile.dir/all: CMakeFiles/rospack_genmsg_libexe.dir/all
 CMakeFiles/rosbuild_precompile.dir/all: CMakeFiles/rospack_gensrv.dir/all
+CMakeFiles/rosbuild_precompile.dir/all: CMakeFiles/rospack_genmsg_libexe.dir/all
 	$(MAKE) -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/depend
 	$(MAKE) -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles 
@@ -623,7 +658,7 @@ clean: CMakeFiles/tests.dir/clean
 CMakeFiles/train_hist.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/train_hist.dir/build.make CMakeFiles/train_hist.dir/depend
 	$(MAKE) -f CMakeFiles/train_hist.dir/build.make CMakeFiles/train_hist.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles  7 8 9
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles  8 9 10
 	@echo "Built target train_hist"
 .PHONY : CMakeFiles/train_hist.dir/all
 
@@ -674,7 +709,7 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles  6
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
@@ -705,7 +740,7 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles  7
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 

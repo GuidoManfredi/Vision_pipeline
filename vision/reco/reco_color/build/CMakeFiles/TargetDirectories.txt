@@ -2,6 +2,7 @@
 /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir
 /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles/ROSBUILD_gensrv_py.dir
 /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles/clean_test_results.dir
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles/clear_training.dir
 /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/CMakeFiles/doxygen.dir
 /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/gtest/CMakeFiles/gtest.dir
 /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/build/gtest/CMakeFiles/gtest_main.dir
