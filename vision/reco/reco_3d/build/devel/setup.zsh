@@ -3,5 +3,5 @@
 
 CATKIN_SHELL=zsh
 emulate sh # emulate POSIX
-. "/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/devel/setup.sh"
+. "/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/devel/setup.sh"
 emulate zsh # back to zsh mode

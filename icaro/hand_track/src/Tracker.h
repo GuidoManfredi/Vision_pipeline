@@ -7,15 +7,16 @@ class Tracker
 {
  public:
  	Tracker ();
- 	cv::RotatedRect camshift (cv::Mat img, cv::Rect detection);
+ 	cv::RotatedRect camshift_init (cv::Mat img, cv::Rect detection);
  	// This version uses the last detection as initializing rectangle.
  	cv::RotatedRect camshift_track (cv::Mat img);
  	bool initialized();
+ 	
+ 	bool tracker_initialized;
  private:
 	cv::Mat hist_;
   cv::RotatedRect last_trackbox_;
   cv::Rect last_detection_;
-  bool tracker_initalized;
  
   int hue_size_, sat_size_, val_min_, val_max_;
   float hue_range_[2];

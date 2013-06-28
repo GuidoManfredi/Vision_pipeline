@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/packs/vision/reco/reco_3d
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build
 
 # Utility rule file for ROSBUILD_gensrv_py.
 
@@ -48,9 +48,9 @@ include CMakeFiles/ROSBUILD_gensrv_py.dir/progress.make
 CMakeFiles/ROSBUILD_gensrv_py: ../src/reco_3d/srv/__init__.py
 
 ../src/reco_3d/srv/__init__.py: ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/reco_3d/srv/__init__.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py --initpy /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/srv/OrientedBoundingBoxRecognition.srv
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py --initpy /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/srv/OrientedBoundingBoxRecognition.srv
 
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: ../srv/OrientedBoundingBoxRecognition.srv
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py
@@ -116,18 +116,18 @@ CMakeFiles/ROSBUILD_gensrv_py: ../src/reco_3d/srv/__init__.py
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /opt/ros/groovy/stacks/arm_navigation_experimental/distance_field/manifest.xml
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/manifest.xml
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/manifest.xml
-../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/manifest.xml
+../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/manifest.xml
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /opt/ros/groovy/stacks/arm_navigation/arm_navigation_msgs/msg_gen/generated
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /opt/ros/groovy/stacks/arm_navigation/arm_navigation_msgs/srv_gen/generated
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/msg_gen/generated
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/srv_gen/generated
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/msg_gen/generated
 ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/srv_gen/generated
-../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/msg_gen/generated
-../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_2)
+../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/msg_gen/generated
+../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/reco_3d/srv/_OrientedBoundingBoxRecognition.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/srv/OrientedBoundingBoxRecognition.srv
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/srv/OrientedBoundingBoxRecognition.srv
 
 ROSBUILD_gensrv_py: CMakeFiles/ROSBUILD_gensrv_py
 ROSBUILD_gensrv_py: ../src/reco_3d/srv/__init__.py
@@ -144,6 +144,6 @@ CMakeFiles/ROSBUILD_gensrv_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_gensrv_py.dir/clean
 
 CMakeFiles/ROSBUILD_gensrv_py.dir/depend:
-	cd /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/packs/vision/reco/reco_3d /home/gmanfred/devel/ros/packs/vision/reco/reco_3d /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles/ROSBUILD_gensrv_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles/ROSBUILD_gensrv_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_gensrv_py.dir/depend
 

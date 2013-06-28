@@ -32,6 +32,16 @@ opencv2/highgui/highgui.hpp
 Histogram.h
 /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/Histogram.h
 
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/train_hist.cpp
+iostream
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+TrainHist.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_color/src/TrainHist.h
+
 /opt/ros/groovy/include/opencv2/core/core.hpp
 opencv2/core/types_c.h
 /opt/ros/groovy/include/opencv2/core/opencv2/core/types_c.h

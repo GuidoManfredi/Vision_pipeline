@@ -17,7 +17,7 @@ void BoundingBoxer::bounding_box_pca (Cloud::ConstPtr cloud,
 	translation(2) = center(2);
 	Eigen::Matrix3f R = pca.getEigenVectors();
 	R.col(2) = R.col(0).cross(R.col(1));
-	/******* GODS KNOW WHY *****/
+	/******* GOD KNOWS WHY *****/
 	Eigen::Vector3f tmp_vec;
 	tmp_vec = R.col(0);
 	R.col(0) = -R.col(1);
@@ -41,10 +41,11 @@ void BoundingBoxer::bounding_box_pca (Cloud::ConstPtr cloud,
 	width = fabs(max(0) - min(0));
 	height = fabs(max(1) - min(1));
 	depth = fabs(max(2) - min(2));
-	
+/*	
 	cout << "W: " << width << " H: " << height << " D: " << depth << endl;
 	cout << "Translation: " << translation.x() << " " << translation.y() << " " << translation.z() << endl;
 	cout << "Rotation: " << quaternion.w() << " " << quaternion.x() << " " << quaternion.y() << " " << quaternion.z() << endl;
+*/
 }
 
 void BoundingBoxer::bounding_box_mvbb (Cloud::ConstPtr cloud,

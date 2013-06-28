@@ -13,7 +13,7 @@ using namespace cv;
 
 string cascade_file = "/home/gmanfred/devel/ros/Vision_pipeline/icaro/hand_detect/cascades/poing.xml";
 Detector det (cascade_file);
-int mode = 0;
+int mode = 2;
 hand_msgs::Rectangle target;
 
 hand_msgs::Rectangle detect (Mat img) {
@@ -39,6 +39,7 @@ void images_cb (const sensor_msgs::ImageConstPtr& msg) {
   }
 
 	if ( mode == 2) {
+		cout << "detecting non stop ..." << endl;
 		target = detect (cv_ptr->image);
 	}
 	else if ( mode == 1) {
@@ -66,6 +67,7 @@ int main (int argc, char** argv) {
   ros::NodeHandle n;
 
 	ros::Subscriber sub_images = n.subscribe(argv[1], 10, images_cb);
+	ros::Publisher pub_target = n.advertise<hand_msgs::Rectangle>("/detection_target", 10);
   ros::ServiceServer srv_hands = n.advertiseService("/detect_hands", detect_hands);
 	ros::ServiceClient srv_client_track = n.serviceClient<hand_track::HandTrack>("track_hands");
   
@@ -77,7 +79,7 @@ int main (int argc, char** argv) {
   		srv.request.rect.push_back(target);
   		if (!srv_client_track.call(srv))
 				ROS_ERROR("Failed to call service track_hands");
-			
+			pub_target.publish (target);
 			// reinit target
 			target.width = 0;
 			target.height = 0;

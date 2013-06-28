@@ -9,7 +9,7 @@ typedef vector<path> vec_path;
 //	PUBLIC METHODS
 ////////////////////////////////////////////////////////////////////////////////
 TrainHist::TrainHist () {
-	_training_results = "training_results.xml";
+	_training_results = "hist_training_results.xml";
 }
 
 bool TrainHist::train (std::string dir,
@@ -159,6 +159,15 @@ string TrainHist::path2rest (string path, string separator) {
 		rest += splitted[i] + separator;
 	return rest;
 }
+
+bool TrainHist::is_right (string file, string separator, string name) {
+	vector<string> splitted;
+	boost::split (splitted, file, boost::algorithm::is_any_of(separator));
+	if (splitted[splitted.size()-1] == name)
+		return true;
+	else
+		return false;
+}
 ////////////////////////////////////////////////////////////////////////////////
 //  Modify these functions depending on the type of descriptor. The rest should
 //	be generic as long as the descriptor can be written in a cv::Mat class.
@@ -185,24 +194,5 @@ Mat TrainHist::merge (Mat descriptor1, Mat descriptor2) {
 		desc = descriptor2;
 	normalize (desc, desc, 0, 1, NORM_MINMAX, -1, Mat() );
 	return desc;
-}
-
-bool TrainHist::is_right (string file, string separator, string name) {
-	vector<string> splitted;
-	boost::split (splitted, file, boost::algorithm::is_any_of(separator));
-	if (splitted[splitted.size()-1] == name)
-		return true;
-	else
-		return false;
-}
-
-string TrainHist::get_mask (string file) {
-	vector<string> splitted;
-	boost::split (splitted, file, boost::algorithm::is_any_of("_"));
-	splitted[splitted.size()-1] = "mask" + splitted[splitted.size()-1];
-	string mask;
-	for (size_t i=0; i < splitted.size(); ++i)
-		mask += splitted[i];
-	return mask;
 }
 

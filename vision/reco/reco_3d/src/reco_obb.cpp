@@ -21,8 +21,8 @@ bool recognize (reco_3d::OrientedBoundingBoxRecognition::Request &req,
 
 	Cloud::Ptr cloud (new Cloud);
 	pcl::fromROSMsg(req.cluster, *cloud);
-	//obb_computer.bounding_box_mvbb (cloud, q, t, w, h, d);
-	obb_computer.bounding_box_pca (cloud, q, t, w, h, d);
+	obb_computer.bounding_box_mvbb (cloud, q, t, w, h, d);
+	//obb_computer.bounding_box_pca (cloud, q, t, w, h, d);
 	res.pose.header = cloud->header;
 	res.pose.pose.position.x = t(0);
 	res.pose.pose.position.y = t(1);

@@ -59,13 +59,12 @@ class TrainHist
  	 * Erase the name and all descriptors of the current object;
  	 **/
  	void clear_training ();
-// private:
+ private:
  	/**
  	 * Check if dir is a directory. If no name has been asined to the object, use
  	 * the dir name as name. Check if the directory has already been trained. If not
  	 * train it, mark it as trained and save the results in the directory.
  	 **/
- 	//bool train_directory (std::string dir);
  	bool train_directory (std::string dir,
 					 							std::vector<std::string> separators,
  												std::vector<std::string> names,
@@ -77,6 +76,7 @@ class TrainHist
 	std::string path2name (std::string path);
 	std::string path2rest (std::string path);
 	std::string path2rest (std::string path, std::string separator);
+	bool is_right (std::string file, std::string separator, std::string name);
  	/**
  	 * Input : a filename containing the required type of data, depending on
  	 *				 which type of information to extract.
@@ -86,9 +86,6 @@ class TrainHist
 	cv::Mat extract (std::string path, std::vector<std::string> separators,
 										 												std::vector<std::string> names);
 	cv::Mat merge (cv::Mat descriptor1, cv::Mat descriptor2);
-	bool is_right (std::string file, std::string separator, std::string name);
-	bool is_image (std::string file);
-	std::string get_mask (std::string file);
 	
 	Histogram hist;
 	cv::Mat _descriptor;

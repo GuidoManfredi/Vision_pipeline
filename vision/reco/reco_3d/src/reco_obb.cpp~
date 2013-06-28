@@ -50,7 +50,7 @@ int main(int argc, char **argv) {
 
   ros::ServiceServer srv_plans = n.advertiseService("/recognition_obb", recognize);
   
-  reco.load_stats (argv[1]);
+  reco.load_training_file (argv[1]);
   
   cout << "Recognition oriented bounding boxes service ready." << endl;
  	ros::Rate loop_rate(10);

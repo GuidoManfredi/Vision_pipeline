@@ -41,10 +41,11 @@ void BoundingBoxer::bounding_box_pca (Cloud::ConstPtr cloud,
 	width = fabs(max(0) - min(0));
 	height = fabs(max(1) - min(1));
 	depth = fabs(max(2) - min(2));
-	
+/*	
 	cout << "W: " << width << " H: " << height << " D: " << depth << endl;
 	cout << "Translation: " << translation.x() << " " << translation.y() << " " << translation.z() << endl;
 	cout << "Rotation: " << quaternion.w() << " " << quaternion.x() << " " << quaternion.y() << " " << quaternion.z() << endl;
+*/
 }
 
 void BoundingBoxer::bounding_box_mvbb (Cloud::ConstPtr cloud,
@@ -81,12 +82,13 @@ void BoundingBoxer::bounding_box_mvbb (Cloud::ConstPtr cloud,
 	R(1, 0) = bb.dir_1[1];		R(1, 1) = bb.dir_2[1];		R(1, 2) = bb.dir_3[1];
 	R(2, 0) = bb.dir_1[2];		R(2, 1) = bb.dir_2[2];		R(2, 2) = bb.dir_3[2];
 	quaternion = Eigen::Quaternionf (R);
+/*
 	cout << R << endl;
 
 	cout << "W: " << width << " H: " << height << " D: " << depth << endl;
 	cout << "Translation: " << translation.x() << " " << translation.y() << " " << translation.z() << endl;
 	cout << "Rotation: " << quaternion.w() << " " << quaternion.x() << " " << quaternion.y() << " " << quaternion.z() << endl;
-
+*/
 }
 
 void BoundingBoxer::pcl2gdiam (Cloud::ConstPtr cloud, gdiam_real* points)

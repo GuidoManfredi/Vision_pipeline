@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/packs/vision/reco/reco_3d
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,9 +110,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -203,19 +203,6 @@ doxygen: cmake_check_build_system
 doxygen/fast:
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
 .PHONY : doxygen/fast
-
-#=============================================================================
-# Target rules for targets named reco_obb
-
-# Build rule for target.
-reco_obb: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 reco_obb
-.PHONY : reco_obb
-
-# fast build rule for target.
-reco_obb/fast:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/build
-.PHONY : reco_obb/fast
 
 #=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
@@ -387,6 +374,19 @@ tests/fast:
 .PHONY : tests/fast
 
 #=============================================================================
+# Target rules for targets named train_obb
+
+# Build rule for target.
+train_obb: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 train_obb
+.PHONY : train_obb
+
+# fast build rule for target.
+train_obb/fast:
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/build
+.PHONY : train_obb/fast
+
+#=============================================================================
 # Target rules for targets named gtest
 
 # Build rule for target.
@@ -417,7 +417,7 @@ src/BoundingBoxer.o: src/BoundingBoxer.cpp.o
 
 # target to build an object file
 src/BoundingBoxer.cpp.o:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/BoundingBoxer.cpp.o
 .PHONY : src/BoundingBoxer.cpp.o
 
 src/BoundingBoxer.i: src/BoundingBoxer.cpp.i
@@ -425,7 +425,7 @@ src/BoundingBoxer.i: src/BoundingBoxer.cpp.i
 
 # target to preprocess a source file
 src/BoundingBoxer.cpp.i:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.i
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/BoundingBoxer.cpp.i
 .PHONY : src/BoundingBoxer.cpp.i
 
 src/BoundingBoxer.s: src/BoundingBoxer.cpp.s
@@ -433,39 +433,39 @@ src/BoundingBoxer.s: src/BoundingBoxer.cpp.s
 
 # target to generate assembly for a file
 src/BoundingBoxer.cpp.s:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.s
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/BoundingBoxer.cpp.s
 .PHONY : src/BoundingBoxer.cpp.s
 
-src/Reco.o: src/Reco.cpp.o
-.PHONY : src/Reco.o
+src/TrainOBB.o: src/TrainOBB.cpp.o
+.PHONY : src/TrainOBB.o
 
 # target to build an object file
-src/Reco.cpp.o:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/Reco.cpp.o
-.PHONY : src/Reco.cpp.o
+src/TrainOBB.cpp.o:
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/TrainOBB.cpp.o
+.PHONY : src/TrainOBB.cpp.o
 
-src/Reco.i: src/Reco.cpp.i
-.PHONY : src/Reco.i
+src/TrainOBB.i: src/TrainOBB.cpp.i
+.PHONY : src/TrainOBB.i
 
 # target to preprocess a source file
-src/Reco.cpp.i:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/Reco.cpp.i
-.PHONY : src/Reco.cpp.i
+src/TrainOBB.cpp.i:
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/TrainOBB.cpp.i
+.PHONY : src/TrainOBB.cpp.i
 
-src/Reco.s: src/Reco.cpp.s
-.PHONY : src/Reco.s
+src/TrainOBB.s: src/TrainOBB.cpp.s
+.PHONY : src/TrainOBB.s
 
 # target to generate assembly for a file
-src/Reco.cpp.s:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/Reco.cpp.s
-.PHONY : src/Reco.cpp.s
+src/TrainOBB.cpp.s:
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/TrainOBB.cpp.s
+.PHONY : src/TrainOBB.cpp.s
 
 src/gdiam.o: src/gdiam.cpp.o
 .PHONY : src/gdiam.o
 
 # target to build an object file
 src/gdiam.cpp.o:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/gdiam.cpp.o
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/gdiam.cpp.o
 .PHONY : src/gdiam.cpp.o
 
 src/gdiam.i: src/gdiam.cpp.i
@@ -473,7 +473,7 @@ src/gdiam.i: src/gdiam.cpp.i
 
 # target to preprocess a source file
 src/gdiam.cpp.i:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/gdiam.cpp.i
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/gdiam.cpp.i
 .PHONY : src/gdiam.cpp.i
 
 src/gdiam.s: src/gdiam.cpp.s
@@ -481,32 +481,32 @@ src/gdiam.s: src/gdiam.cpp.s
 
 # target to generate assembly for a file
 src/gdiam.cpp.s:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/gdiam.cpp.s
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/gdiam.cpp.s
 .PHONY : src/gdiam.cpp.s
 
-src/reco_obb.o: src/reco_obb.cpp.o
-.PHONY : src/reco_obb.o
+src/train_obb.o: src/train_obb.cpp.o
+.PHONY : src/train_obb.o
 
 # target to build an object file
-src/reco_obb.cpp.o:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o
-.PHONY : src/reco_obb.cpp.o
+src/train_obb.cpp.o:
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/train_obb.cpp.o
+.PHONY : src/train_obb.cpp.o
 
-src/reco_obb.i: src/reco_obb.cpp.i
-.PHONY : src/reco_obb.i
+src/train_obb.i: src/train_obb.cpp.i
+.PHONY : src/train_obb.i
 
 # target to preprocess a source file
-src/reco_obb.cpp.i:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/reco_obb.cpp.i
-.PHONY : src/reco_obb.cpp.i
+src/train_obb.cpp.i:
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/train_obb.cpp.i
+.PHONY : src/train_obb.cpp.i
 
-src/reco_obb.s: src/reco_obb.cpp.s
-.PHONY : src/reco_obb.s
+src/train_obb.s: src/train_obb.cpp.s
+.PHONY : src/train_obb.s
 
 # target to generate assembly for a file
-src/reco_obb.cpp.s:
-	$(MAKE) -f CMakeFiles/reco_obb.dir/build.make CMakeFiles/reco_obb.dir/src/reco_obb.cpp.s
-.PHONY : src/reco_obb.cpp.s
+src/train_obb.cpp.s:
+	$(MAKE) -f CMakeFiles/train_obb.dir/build.make CMakeFiles/train_obb.dir/src/train_obb.cpp.s
+.PHONY : src/train_obb.cpp.s
 
 # Help Target
 help:
@@ -525,7 +525,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... reco_obb"
 	@echo "... rosbuild_clean-test-results"
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
@@ -539,20 +538,21 @@ help:
 	@echo "... test-results"
 	@echo "... test-results-run"
 	@echo "... tests"
+	@echo "... train_obb"
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... src/BoundingBoxer.o"
 	@echo "... src/BoundingBoxer.i"
 	@echo "... src/BoundingBoxer.s"
-	@echo "... src/Reco.o"
-	@echo "... src/Reco.i"
-	@echo "... src/Reco.s"
+	@echo "... src/TrainOBB.o"
+	@echo "... src/TrainOBB.i"
+	@echo "... src/TrainOBB.s"
 	@echo "... src/gdiam.o"
 	@echo "... src/gdiam.i"
 	@echo "... src/gdiam.s"
-	@echo "... src/reco_obb.o"
-	@echo "... src/reco_obb.i"
-	@echo "... src/reco_obb.s"
+	@echo "... src/train_obb.o"
+	@echo "... src/train_obb.i"
+	@echo "... src/train_obb.s"
 .PHONY : help
 
 

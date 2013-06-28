@@ -6,6 +6,6 @@ if [ $# -eq 0 ] ; then
   /bin/echo "Calling env.sh without arguments is not supported anymore. Instead spawn a subshell and source a setup file manually."
   exit 1
 else
-  . "/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/catkin_generated/setup_cached.sh"
+  . "/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/catkin_generated/setup_cached.sh"
   exec "$@"
 fi

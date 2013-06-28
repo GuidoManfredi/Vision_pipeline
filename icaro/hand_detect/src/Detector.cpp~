@@ -10,7 +10,6 @@ Detector::Detector (string cascade_name):cascade_name_(cascade_name) {
 
 vector<Rect> Detector::detect (Mat img) {
 	vector<Rect> hands;
-	
 	int scale = 1;
 	Mat gray, smallImg( cvRound (img.rows/scale), cvRound(img.cols/scale), CV_8UC1 );
 	cvtColor( img, gray, CV_BGR2GRAY );

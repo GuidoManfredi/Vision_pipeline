@@ -17,7 +17,7 @@ vector<Rect> Detector::detect (Mat img) {
   equalizeHist( smallImg, smallImg );
   
   double scaleFactor = 1.1;
-  int min_neighbors = 10;
+  int min_neighbors = 15;
   cascade_.detectMultiScale( smallImg, hands, scaleFactor, min_neighbors, 0
     |CV_HAAR_FIND_BIGGEST_OBJECT
     //|CV_HAAR_DO_ROUGH_SEARCH

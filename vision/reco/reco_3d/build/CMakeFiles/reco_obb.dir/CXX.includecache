@@ -36,7 +36,11 @@ geometry_msgs/PoseStamped.h
 geometry_msgs/Vector3.h
 ../srv_gen/cpp/include/reco_3d/geometry_msgs/Vector3.h
 
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/BoundingBoxer.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/BoundingBoxer.cpp
+BoundingBoxer.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/BoundingBoxer.h
+
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/BoundingBoxer.h
 cmath
 -
 iostream
@@ -46,17 +50,17 @@ pcl/io/pcd_io.h
 pcl/common/pca.h
 -
 pcl/point_types.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/pcl/point_types.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/pcl/point_types.h
 defines.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/defines.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/defines.h
 gdiam.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/gdiam.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/gdiam.h
 
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/Reco.cpp
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/Reco.cpp
 Reco.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/Reco.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/Reco.h
 
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/Reco.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/Reco.h
 fstream
 -
 boost/algorithm/string/split.hpp
@@ -68,25 +72,43 @@ boost/math/distributions/chi_squared.hpp
 Eigen/Core
 -
 pcl/point_types.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/pcl/point_types.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/pcl/point_types.h
 
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/defines.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/defines.h
 
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/gdiam.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/gdiam.cpp
+stdlib.h
+-
+stdio.h
+-
+assert.h
+-
+memory.h
+-
+math.h
+-
+vector
+-
+algorithm
+-
+gdiam.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/gdiam.h
 
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/reco_obb.cpp
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/gdiam.h
+
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/reco_obb.cpp
 ros/ros.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/ros/ros.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/ros/ros.h
 pcl_ros/point_cloud.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/pcl_ros/point_cloud.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/pcl_ros/point_cloud.h
 pcl/point_types.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/pcl/point_types.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/pcl/point_types.h
 BoundingBoxer.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/BoundingBoxer.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/BoundingBoxer.h
 Reco.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/Reco.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/Reco.h
 reco_3d/OrientedBoundingBoxRecognition.h
-/home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/reco_3d/OrientedBoundingBoxRecognition.h
+/home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/reco_3d/OrientedBoundingBoxRecognition.h
 
 /opt/ros/groovy/include/XmlRpcDecl.h
 ros/macros.h

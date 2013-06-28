@@ -13,7 +13,7 @@ using namespace cv;
 Tracker tracker;
 Rect init_pose;
 RotatedRect target;
-/*
+
 void images_cb (const sensor_msgs::ImageConstPtr& msg) {
 	cv_bridge::CvImagePtr cv_ptr;
 	try {
@@ -30,20 +30,21 @@ void images_cb (const sensor_msgs::ImageConstPtr& msg) {
 	}	else {
 		if ( init_pose.width > 0 && init_pose.height > 0) {
 			cout << "Init track" << endl;
-			target = tracker.camshift (cv_ptr->image, init_pose);
+			target = tracker.camshift_init (cv_ptr->image, init_pose);
 		}
 	}
 }
 
 bool track_hands (hand_track::HandTrack::Request &req,
 									hand_track::HandTrack::Response &res) {
-	init_pose.x = req.rect[0].x;
-	init_pose.y = req.rect[0].y;
-	init_pose.width = req.rect[0].width;
-	init_pose.height = req.rect[0].height;
+	init_pose.x = req.rect[0].x+5;
+	init_pose.y = req.rect[0].y+5;
+	init_pose.width = req.rect[0].width-5;
+	init_pose.height = req.rect[0].height-5;
+	tracker.tracker_initialized = false;
 	return true;
 }
-*/
+
 
 int main (int argc, char** argv) {
 	if (argc != 2) {
@@ -56,12 +57,12 @@ int main (int argc, char** argv) {
 
 	ros::Subscriber sub_images = n.subscribe(argv[1], 10, images_cb);
   ros::ServiceServer srv_hands = n.advertiseService("/track_hands", track_hands);
- 	ros::Publisher pub_rect = n.advertise<hand_msgs::RotatedRectangle>("/target", 10);
+ 	ros::Publisher pub_rect = n.advertise<hand_msgs::RotatedRectangle>("/tracking_target", 10);
 
 	ros::Rate loop_rate(10);
 	while (ros::ok()) {
 		ros::spinOnce ();
-		
+		//cout << "target: " << target.size.width << " " << target.size.height << endl;
 		hand_msgs::RotatedRectangle rotrect;
 		rotrect.x = target.center.x;
 		rotrect.y = target.center.y;

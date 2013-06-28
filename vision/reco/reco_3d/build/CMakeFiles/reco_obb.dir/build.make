@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/packs/vision/reco/reco_3d
+CMAKE_SOURCE_DIR = /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build
+CMAKE_BINARY_DIR = /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/reco_obb.dir/depend.make
@@ -104,26 +104,26 @@ CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /opt/ros/groovy/stacks/bullet/manife
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /opt/ros/groovy/stacks/arm_navigation_experimental/distance_field/manifest.xml
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/manifest.xml
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/manifest.xml
-CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/manifest.xml
+CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/manifest.xml
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /opt/ros/groovy/stacks/arm_navigation/arm_navigation_msgs/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /opt/ros/groovy/stacks/arm_navigation/arm_navigation_msgs/srv_gen/generated
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/srv_gen/generated
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/srv_gen/generated
-CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/msg_gen/generated
-CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/msg_gen/generated
+CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o -c /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/reco_obb.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o -c /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/reco_obb.cpp
 
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reco_obb.dir/src/reco_obb.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/reco_obb.cpp > CMakeFiles/reco_obb.dir/src/reco_obb.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/reco_obb.cpp > CMakeFiles/reco_obb.dir/src/reco_obb.cpp.i
 
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reco_obb.dir/src/reco_obb.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/reco_obb.cpp -o CMakeFiles/reco_obb.dir/src/reco_obb.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/reco_obb.cpp -o CMakeFiles/reco_obb.dir/src/reco_obb.cpp.s
 
 CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o.requires:
 .PHONY : CMakeFiles/reco_obb.dir/src/reco_obb.cpp.o.requires
@@ -189,26 +189,26 @@ CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /opt/ros/groovy/stacks/bullet/m
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /opt/ros/groovy/stacks/arm_navigation_experimental/distance_field/manifest.xml
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/manifest.xml
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/manifest.xml
-CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/manifest.xml
+CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/manifest.xml
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /opt/ros/groovy/stacks/arm_navigation/arm_navigation_msgs/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /opt/ros/groovy/stacks/arm_navigation/arm_navigation_msgs/srv_gen/generated
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/srv_gen/generated
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/srv_gen/generated
-CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/msg_gen/generated
-CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_2)
+CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/msg_gen/generated
+CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o -c /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/BoundingBoxer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o -c /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/BoundingBoxer.cpp
 
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/BoundingBoxer.cpp > CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/BoundingBoxer.cpp > CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.i
 
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/BoundingBoxer.cpp -o CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/BoundingBoxer.cpp -o CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.s
 
 CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o.requires:
 .PHONY : CMakeFiles/reco_obb.dir/src/BoundingBoxer.cpp.o.requires
@@ -274,26 +274,26 @@ CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /opt/ros/groovy/stacks/bullet/manifest.
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /opt/ros/groovy/stacks/arm_navigation_experimental/distance_field/manifest.xml
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/manifest.xml
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/manifest.xml
-CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/manifest.xml
+CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/manifest.xml
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /opt/ros/groovy/stacks/arm_navigation/arm_navigation_msgs/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /opt/ros/groovy/stacks/arm_navigation/arm_navigation_msgs/srv_gen/generated
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/srv_gen/generated
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/srv_gen/generated
-CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/msg_gen/generated
-CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_3)
+CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/msg_gen/generated
+CMakeFiles/reco_obb.dir/src/gdiam.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/reco_obb.dir/src/gdiam.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/reco_obb.dir/src/gdiam.cpp.o -c /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/gdiam.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/reco_obb.dir/src/gdiam.cpp.o -c /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/gdiam.cpp
 
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reco_obb.dir/src/gdiam.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/gdiam.cpp > CMakeFiles/reco_obb.dir/src/gdiam.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/gdiam.cpp > CMakeFiles/reco_obb.dir/src/gdiam.cpp.i
 
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reco_obb.dir/src/gdiam.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/gdiam.cpp -o CMakeFiles/reco_obb.dir/src/gdiam.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/gdiam.cpp -o CMakeFiles/reco_obb.dir/src/gdiam.cpp.s
 
 CMakeFiles/reco_obb.dir/src/gdiam.cpp.o.requires:
 .PHONY : CMakeFiles/reco_obb.dir/src/gdiam.cpp.o.requires
@@ -359,26 +359,26 @@ CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /opt/ros/groovy/stacks/bullet/manifest.x
 CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /opt/ros/groovy/stacks/arm_navigation_experimental/distance_field/manifest.xml
 CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/manifest.xml
 CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/manifest.xml
-CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/manifest.xml
+CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/manifest.xml
 CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /opt/ros/groovy/stacks/arm_navigation/arm_navigation_msgs/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /opt/ros/groovy/stacks/arm_navigation/arm_navigation_msgs/srv_gen/generated
 CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /opt/ros/groovy/stacks/object_manipulation/household_objects_database_msgs/srv_gen/generated
 CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/msg_gen/generated
 CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /opt/ros/groovy/stacks/pr2_object_manipulation/perception/tabletop_object_detector/srv_gen/generated
-CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/msg_gen/generated
-CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /home/gmanfred/devel/ros/packs/vision/seg/seg_plans_objs/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_4)
+CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/msg_gen/generated
+CMakeFiles/reco_obb.dir/src/Reco.cpp.o: /home/gmanfred/devel/ros/Vision_pipeline/vision/seg/seg_plans_objs/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/reco_obb.dir/src/Reco.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/reco_obb.dir/src/Reco.cpp.o -c /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/Reco.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/reco_obb.dir/src/Reco.cpp.o -c /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/Reco.cpp
 
 CMakeFiles/reco_obb.dir/src/Reco.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reco_obb.dir/src/Reco.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/Reco.cpp > CMakeFiles/reco_obb.dir/src/Reco.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/Reco.cpp > CMakeFiles/reco_obb.dir/src/Reco.cpp.i
 
 CMakeFiles/reco_obb.dir/src/Reco.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reco_obb.dir/src/Reco.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/src/Reco.cpp -o CMakeFiles/reco_obb.dir/src/Reco.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/src/Reco.cpp -o CMakeFiles/reco_obb.dir/src/Reco.cpp.s
 
 CMakeFiles/reco_obb.dir/src/Reco.cpp.o.requires:
 .PHONY : CMakeFiles/reco_obb.dir/src/Reco.cpp.o.requires
@@ -423,6 +423,6 @@ CMakeFiles/reco_obb.dir/clean:
 .PHONY : CMakeFiles/reco_obb.dir/clean
 
 CMakeFiles/reco_obb.dir/depend:
-	cd /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/packs/vision/reco/reco_3d /home/gmanfred/devel/ros/packs/vision/reco/reco_3d /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build /home/gmanfred/devel/ros/packs/vision/reco/reco_3d/build/CMakeFiles/reco_obb.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build /home/gmanfred/devel/ros/Vision_pipeline/vision/reco/reco_3d/build/CMakeFiles/reco_obb.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/reco_obb.dir/depend
 
